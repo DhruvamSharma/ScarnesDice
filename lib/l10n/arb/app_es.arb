@@ -3,5 +3,22 @@
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
+    },
+
+    "gameAppBarTitle": "Dados de Scarne",
+    "@gameAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página del juego"
+    },
+    "rollButton": "Tirar",
+    "@rollButton": {
+        "description": "Texto mostrado en el botón de tirar"
+    },
+    "resetButton": "Reiniciar",
+    "@resetButton": {
+        "description": "Texto mostrado en el botón de reiniciar"
+    },
+    "holdButton": "Mantener",
+    "@holdButton": {
+        "description": "Texto mostrado en el botón de mantener"
     }
 }

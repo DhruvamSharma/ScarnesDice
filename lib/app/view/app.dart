@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scarnes_dice_starter/counter/counter.dart';
+import 'package:scarnes_dice_starter/game/view/game_page.dart';
 import 'package:scarnes_dice_starter/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const GamePage(),
     );
   }
 }

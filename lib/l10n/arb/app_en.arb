@@ -3,5 +3,21 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "gameAppBarTitle": "Scarne's Dice",
+    "@gameAppBarTitle": {
+        "description": "Text shown in the AppBar of the Game Page"
+    },
+    "rollButton": "Roll",
+    "@rollButton": {
+        "description": "Text shown on the Roll Button"
+    },
+    "resetButton": "Reset",
+    "@resetButton": {
+        "description": "Text shown on the Reset Button"
+    },
+    "holdButton": "Hold",
+    "@holdButton": {
+        "description": "Text shown on the Hold Button"
     }
 }
