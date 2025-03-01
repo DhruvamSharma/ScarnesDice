@@ -21,3 +21,10 @@ final class Reset extends GameEvent {
   @override
   List<Object> get props => [];
 }
+
+final class ComputerTurn extends GameEvent {
+  ComputerTurn();
+
+  @override
+  List<Object> get props => [];
+}
