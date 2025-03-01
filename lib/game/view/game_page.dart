@@ -88,28 +88,35 @@ class _ActionButtonRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final bloc = context.read<GameBloc>();
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        OutlinedButton(
-          onPressed: () {
-            bloc.add(Roll());
-          },
-          child: Text(l10n.rollButton),
-        ),
-        OutlinedButton(
-          onPressed: () {
-            bloc.add(Hold());
-          },
-          child: Text(l10n.holdButton),
-        ),
-        OutlinedButton(
-          onPressed: () {
-            bloc.add(Reset());
-          },
-          child: Text(l10n.resetButton),
-        ),
-      ],
+    return BlocBuilder<GameBloc, GameState>(
+      buildWhen: (previous, current) =>
+      previous.isPlayerTurn != current.isPlayerTurn,
+      builder: (context, state) {
+        final isPlayerTurn = state.isPlayerTurn;
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            OutlinedButton(
+              onPressed: isPlayerTurn? () {
+                bloc.add(Roll());
+              }: null,
+              child: Text(l10n.rollButton),
+            ),
+            OutlinedButton(
+              onPressed: isPlayerTurn? () {
+                bloc.add(Hold());
+              }: null,
+              child: Text(l10n.holdButton),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                bloc.add(Reset());
+              },
+              child: Text(l10n.resetButton),
+            ),
+          ],
+        );
+      },
     );
   }
 }
