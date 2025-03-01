@@ -3,11 +3,7 @@ part of 'game_bloc.dart';
 sealed class GameEvent extends Equatable {}
 
 final class Roll extends GameEvent {
-  Roll(): isPlayerRoll = true;
-  Roll.computer(): isPlayerRoll = false;
-
-  final bool isPlayerRoll;
-
+  Roll();
   @override
   List<Object> get props => [];
 }
